@@ -1,78 +1,98 @@
-<?php 
-// # - Letter, @ - Number
+<?php
+
+// # - Буква, @ - Цифра // Без ограничений
+// $ - Буква, % - Цифра // Без A, E, I, O, U, L, S, 0, 1 и 5. (Xbox/WinStore)
 $games = array(
-	'---Steam---' => '#####-#####-#####-#####-#####',
-	'Total War: Shogun 2' => '###@#-##@##-##@##-#@###-@####',
-	'Mafia II' => '@@#@@-##@@#-###@@-@###@-@#@##',
-	'RAGE' => '##@##-#@#@@-##@##',
-	'Call of Duty: Black Ops' => '@@#@@-###@#-#####-##@##-#####',
-	'The Elder Scrolls: Skyrim' => '@@@##-##@@@-##@#@',
-	'Dead Island' => '@####-@####-@####',
-	'Warhammer 40K: Space Marine' => '#####-@@##@-####@',
-	'Homefront' => '###@#-#@##@-#####',
-	'Orange Box' => '###@#-#####-##@@#-#####-#@##@',
-	'Portal 2' => '###@@-#####-@####',
-	'---Origin---' => '#####-#####-#####-#####-#####',
-	'Sims 2' => '@##@######@@#######@',
-	'Sims 3' => '#@#########@####@##@',
-	'---Mojang---' => '#####-#####-#####-#####-#####',
-	'Minecraft Gift Code Type 1' => '#@#@#-#@#@#-#@#@#-#@#@#-#@#@#',
-	'Minecraft Gift Code Type 2' => '#@#@-#@#@-#@#@',
-	'Minecraft Gift Code Type 3' => '@@@ @@@ @@@@',
-	'---Xbox Giveaway 101120---' => '#####-#####-#####-#####-#####',
-	'Watch Dogs Legion' => '##@##-#@@##-#####-@####-#####',
-	'Ori and the Will of the Wisps' => '###@@-##@@#-@####-#####-#####',
-	'Yakuza Like a Dragon' => '#####-#@##@-#####-###@#-#@@@#',
-	'Project CARS 3' => '@@###-@####-####@-@@###-@####',
-	'Gears Tactics' => '####@-#@###-#@##@-#####-@@#@#',
-	'Gears 5' => '@@###-###@@-@@###-##@@#-##@##',
-	'Falconeer' => '@##@@-###@#-#####-@@##@-#####',
-	'Assasins Creed Valhalla' => '#####-##@##-##@@#-#####-#@@##',
-	'Destiny 2 Beyond Light' => '###@@-@##@#-##@#@-#####-##@##',
-	'---Other---' => '#####-#####-#####-#####-#####',
-	'Unknown Random Microsoft' => '@@#@#-#@###-##@@#-@####-#####',
-	'Microsoft Xbox Ultimate' => '####@-@##@#-###@#-#@##@-#@###',
+    '---Steam---' => '#####-#####-#####-#####-#####',
+    'Random Steam Type 1' => '!!!!!-!!!!!-!!!!!',
+    'Random Steam Type 2' => '!!!!!-!!!!!-!!!!!-!!!!!-!!!!!',
+    'Random Steam Type 3' => '@@@############ @@',
+    'Total War: Shogun 2' => '###@#-##@##-##@##-#@###-@####',
+    'Mafia II' => '@@#@@-##@@#-###@@-@###@-@#@##',
+    'RAGE' => '##@##-#@#@@-##@##',
+    'Call of Duty: Black Ops' => '@@#@@-###@#-#####-##@##-#####',
+    'The Elder Scrolls: Skyrim' => '@@@##-##@@@-##@#@',
+    'Dead Island' => '@####-@####-@####',
+    'Warhammer 40K: Space Marine' => '#####-@@##@-####@',
+    'Homefront' => '###@#-#@##@-#####',
+    'Orange Box' => '###@#-#####-##@@#-#####-#@##@',
+    'Portal 2' => '###@@-#####-@####',
+    '---Origin---' => '#####-#####-#####-#####-#####',
+    'Sims 2' => '@##@######@@#######@',
+    'Sims 3' => '#@#########@####@##@',
+    '---Mojang---' => '#####-#####-#####-#####-#####',
+    'Minecraft Gift Code Type 1' => '#@#@#-#@#@#-#@#@#-#@#@#-#@#@#',
+    'Minecraft Gift Code Type 2' => '#@#@-#@#@-#@#@',
+    'Minecraft Gift Code Type 3' => '@@@ @@@ @@@@',
+    '---Xbox Giveaway 101120---' => '$$$$$-$$$$$-$$$$$-$$$$$-$$$$$',
+    'Watch Dogs Legion' => '$$%$$-$%%$$-$$$$$-%$$$$-$$$$$',
+    'Ori and the Will of the Wisps' => '$$$%%-$$%%$-%$$$$-$$$$$-$$$$$',
+    'Yakuza Like a Dragon' => '$$$$$-$%$$%-$$$$$-$$$%$-$%%%$',
+    'Project CARS 3' => '%%$$$-%$$$$-$$$$%-%%$$$-%$$$$',
+    'Gears Tactics' => '$$$$%-$%$$$-$%$$%-$$$$$-%%$%$',
+    'Gears 5' => '%%$$$-$$$%%-%%$$$-$$%%$-$$%$$',
+    'Falconeer' => '%$$%%-$$$%$-$$$$$-%%$$%-$$$$$',
+    'Assasins Creed Valhalla' => '$$$$$-$$%$$-$$%%$-$$$$$-$%%$$',
+    'Destiny 2 Beyond Light' => '$$$%%-%$$%$-$$%$%-$$$$$-$$%$$',
+    '---Other---' => '$$$$$-$$$$$-$$$$$-$$$$$-$$$$$',
+    'Unknown Random Microsoft' => '%%$%$-$%$$$-$$%%$-%$$$$-$$$$$',
+    'Microsoft Xbox Ultimate' => '$$$$%-%$$%$-$$$%$-$%$$%-$%$$$',
+    'Unknown Random PlayStation 4' => '!!!!!!!!!!!!',
 );
 
 $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+$charsXbox = 'BCDFGHJKMNPQRTVWXYZ';
+$numbersXbox = '12346789';
+
+$charsAndNumbers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
 function getGamesList()
 {
-	global $games;
-	$list = '';
-	foreach ($games as $game => $key)
-	{
-		$list .= '<option>' . $game . '</option>';
-	}
-	return $list;
+    global $games;
+    $list = '';
+    foreach ($games as $game => $key)
+    {
+        $list .= '<option>' . $game . '</option>';
+    }
+    return $list;
 }
 
 if (isset($_POST['submit']) && $_POST['submit'] == 'true')
 {
-	if (isset($_POST['game']) && isset($games[$_POST['game']]))
-	{
-		$key = '';
-		foreach (str_split($games[$_POST['game']]) as $char)
-		{
-			switch ($char)
-			{
-			case '#':
-				$key .= $chars[mt_rand(0, strlen($chars) - 1) ];
-				break;
-			case '@':
-				$key .= mt_rand(0, 9);
-				break;
-			default:
-				$key .= $char;
-				break;
-			}
-		}
-		echo $key;
-	}
-	else
-	{
-		echo 'Game not selected';
-	}
+    if (isset($_POST['game']) && isset($games[$_POST['game']]))
+    {
+        $key = '';
+        foreach (str_split($games[$_POST['game']]) as $char)
+        {
+            switch ($char)
+            {
+                case '!':
+                    $key .= $charsAndNumbers[mt_rand(0, strlen($charsAndNumbers) - 1) ];
+                break;
+                case '#':
+                    $key .= $chars[mt_rand(0, strlen($chars) - 1) ];
+                break;
+                case '@':
+                    $key .= mt_rand(0, 9);
+                break;
+                case '$':
+                    $key .= $charsXbox[mt_rand(0, strlen($charsXbox) - 1) ];
+                break;
+                case '%':
+                    $key .= $numbersXbox[mt_rand(0, strlen($numbersXbox) - 1) ];
+                break;
+                default:
+                    $key .= $char;
+                break;
+            }
+        }
+        echo $key;
+    }
+    else
+    {
+        echo 'Game not selected';
+    }
 }
 else
 {
