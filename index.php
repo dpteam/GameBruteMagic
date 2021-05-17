@@ -2,6 +2,7 @@
 
 // # - Буква, @ - Цифра // Без ограничений
 // $ - Буква, % - Цифра // Без A, E, I, O, U, L, S, 0, 1 и 5. (Xbox/WinStore)
+// . - любой символ // Без I, O и Z, (Switch)
 $games = array(
     '---Steam---' => '#####-#####-#####-#####-#####',
     'Random Steam Type 1' => '!!!!!-!!!!!-!!!!!',
@@ -38,14 +39,16 @@ $games = array(
     'Unknown Random Microsoft' => '%%$%$-$%$$$-$$%%$-%$$$$-$$$$$',
     'Microsoft Xbox Ultimate' => '$$$$%-%$$%$-$$$%$-$%$$%-$%$$$',
     'Unknown Random PlayStation 4' => '!!!!!!!!!!!!',
+    'Unknown Random Nintendo Switch' => 'C0C.............',
 );
 
 $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$charsAndNumbers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
 $charsXbox = 'BCDFGHJKMNPQRTVWXYZ';
 $numbersXbox = '12346789';
 
-$charsAndNumbers = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+$charsAndNumbersSwitch = 'ABCDEFGHJKLMNPQRSTUVWXY0123456789';
 
 function getGamesList()
 {
@@ -81,6 +84,9 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'true')
                 break;
                 case '%':
                     $key .= $numbersXbox[mt_rand(0, strlen($numbersXbox) - 1) ];
+                break;
+                case '.':
+                    $key .= $charsAndNumbersSwitch[mt_rand(0, strlen($charsAndNumbersSwitch) - 1) ];
                 break;
                 default:
                     $key .= $char;
