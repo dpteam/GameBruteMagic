@@ -39,7 +39,9 @@ $games = array(
     'Unknown Random Microsoft' => '%%$%$-$%$$$-$$%%$-%$$$$-$$$$$',
     'Microsoft Xbox Ultimate' => '$$$$%-%$$%$-$$$%$-$%$$%-$%$$$',
     'Unknown Random PlayStation 4' => '!!!!!!!!!!!!',
-    'Unknown Random Nintendo Switch' => 'C0C.............',
+    'Unknown Random Nintendo Switch #1' => 'C0C.............',
+    'Unknown Random Nintendo Switch #2' => 'C0..............',
+    'Unknown Random Nintendo Switch #3' => 'E0..............',
 );
 
 $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
