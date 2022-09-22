@@ -42,6 +42,7 @@ $games = array(
     'Unknown Random Nintendo Switch #1' => 'C0C.............',
     'Unknown Random Nintendo Switch #2' => 'C0..............',
     'Unknown Random Nintendo Switch #3' => 'E0..............',
+    'ISPmanager' => '@@@@@@@-######@####@####@@@@@@@@@@',
 );
 
 $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
